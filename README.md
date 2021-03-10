@@ -56,13 +56,7 @@ Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de mod
 	- consultar trader
 
 2.INVESTMENTS
-	* Realizar investimentos
-	* Cancelar investimentos
-	* Consultar investimentos por Trader
-	* Consultar ticker de empresas investidos
-	* Consultar investimentos por tipo de operação (Buy and Sell)
-	* Consultar investimentos por status da operação
-	* Consultar investimentos por dia de transação
+	- Realizar investimentos
 
 Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
 
