@@ -56,13 +56,13 @@ Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de mod
 	- consultar trader
 
 2.INVESTMENTS
-	- Realizar investimentos
-	- Cancelar investimentos
-	- Consultar investimentos por Trader
-	- Consultar ticker de empresas investidos
-	- Consultar investimentos por tipo de operação (Buy and Sell)
-	- Consultar investimentos por status da operação
-	- Consultar investimentos por dia de transação
+	* Realizar investimentos
+	* Cancelar investimentos
+	* Consultar investimentos por Trader
+	* Consultar ticker de empresas investidos
+	* Consultar investimentos por tipo de operação (Buy and Sell)
+	* Consultar investimentos por status da operação
+	* Consultar investimentos por dia de transação
 
 Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
 
@@ -70,7 +70,7 @@ Agora que identificamos os padrões de acesso, podemos modelar nossos casos de u
 
 Existem dois processos principais, *Traders* e *Investments*. Para trabalharmos com DynamoDB precisamos "esquecer" a característica dos RDBMS de normalização de tabelas e joins. No DynamoDB, todos os casos de uso serão persisitidos em um único objeto.
 
-Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py) a tabela e definirmos os **padrões de acesso** a ela.
+Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py).
 
 ### Padrões de Acesso
 
