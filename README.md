@@ -64,7 +64,6 @@ Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de mod
 	- Consultar investimentos por status da operação
 	- Consultar investimentos por dia de transação
 
-
 Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
 
 ![ERD_dynamo](https://github.com/levisouuza/DynamoTrader/blob/master/images/ERD_dynamoDB.png)
