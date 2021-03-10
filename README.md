@@ -70,9 +70,9 @@ Agora que identificamos os padrões de acesso, podemos modelar nossos casos de u
 
 Existem dois processos principais, *Traders* e *Investments*. Para trabalharmos com DynamoDB precisamos "esquecer" a característica dos RDBMS de normalização de tabelas e joins. No DynamoDB, todos os casos de uso serão persisitidos em um único objeto.
 
-Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py).
+Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py) tabela.
 
-Para facilitar a consulta de alguns dados, podemos criar índices. No projeto foram criados índices do tipo GSI. A imagem abaixo podemos observá-los na console da AWS e com esse [script](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateIndex.py) é possível visualizar como podemos criá-los.
+Para facilitar a consulta de alguns dados, podemos criar índices. No projeto foram criados índices do tipo GSI (Global Secondary Index). Na imagem abaixo podemos observá-los na console da AWS e com esse [script](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateIndex.py) é possível visualizar como podemos criá-los.
 
 ![GSI](https://github.com/levisouuza/DynamoTrader/blob/master/images/GSI_dynamo_AWS.png)
 
