@@ -39,7 +39,7 @@ Alguns conceitos são primordiais quando trabalhamos com o DynamoDB:
 		* Pode ser criado a qualquer momento.
 		* Pode usar uma partition key diferente da tabela.
 
-**Capacity Units (CUs)**: Conforme documentação da ![AWS](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html) detalha a capacidade de transferência de sua operação. Quando criamos uma tabela, precisamos estabelecer dois de tipos CUs: 
+**Capacity Units (CUs)**: Conforme documentação da [AWS](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html) detalha a capacidade de transferência de sua operação. Quando criamos uma tabela, precisamos estabelecer dois de tipos CUs: 
 
 	- Read Capacity Units: Representa uma consistência forte de leitura por segundo. Quanto maior o item que você deseja ler, maior será a RCU consumida (e cobrada por isso).
 	- Write Capacity Units: Representa uma escrita por segundo de um item de 1Kb. Quanto maior o item que você escrever, maior será a WCU solicitada (e cobrada por isso).
@@ -49,7 +49,7 @@ Alguns conceitos são primordiais quando trabalhamos com o DynamoDB:
 
 Assim como os bancos de dados relacionais, o Kick-off para implementação de um banco de dados NoSQL consiste em modelar a estrutura de dados que será persistida. Logo, segue a imagem da modelagem para a nossa tabela.
 
-(ERD_dynamo)(https://github.com/levisouuza/DynamoTrader/blob/master/images/ERD_dynamoDB.png)
+![ERD_dynamo](https://github.com/levisouuza/DynamoTrader/blob/master/images/ERD_dynamoDB.png)
 
 Como podemos observar, existem dois processos principais, Traders e Investments. Para trabalharmos com DynamoDB precisamos "esquecer" a característica dos RDBMS de nomarlização de tabelas e joins. No DynamoDB, todos os casos de uso serão persisitidos em um único objeto.
 
