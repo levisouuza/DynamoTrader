@@ -76,7 +76,7 @@ Para facilitar a consulta de alguns dados, podemos criar índices. No projeto fo
 
 ![GSI](https://github.com/levisouuza/DynamoTrader/blob/master/images/GSI_dynamo_AWS.png)
 
-Por fim, nesse [script](https://github.com/levisouuza/DynamoTrader/blob/master/main.py) observamos o códigos em ação, realizamos alguns dos padrões de acesso citados acima. O resultado final está abaixo, direto da console da AWS.
+Por fim, nesse [script](https://github.com/levisouuza/DynamoTrader/blob/master/main.py) observamos o códigos em ação, onde realizamos alguns dos padrões de acesso citados acima. O resultado final está abaixo, direto da console da AWS.
 
 ![dadosDynamoDB](https://github.com/levisouuza/DynamoTrader/blob/master/images/Dados_consoleAWS.png)
 
