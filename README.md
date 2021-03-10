@@ -72,7 +72,9 @@ Existem dois processos principais, *Traders* e *Investments*. Para trabalharmos 
 
 Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py).
 
-### Padrões de Acesso
+Para facilitar a consulta de alguns dados, podemos criar índices. No projeto foram criados índices do tipo GSI. A imagem abaixo podemos observá-los na console da AWS e com esse [script](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateIndex.py) é possível visualizar como podemos criá-los.
+
+![GSI](https://github.com/levisouuza/DynamoTrader/blob/master/images/GSI_dynamo_AWS.png)
 
 
 
