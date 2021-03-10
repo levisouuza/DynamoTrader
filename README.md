@@ -7,7 +7,7 @@ Como são transações em High Frenquency, escolhi o DynamoDB devido sua flexibi
 
 ### Overview - NoSQL Databases.
 
-BancoS de dados NoSQL - Not Only SQL - são utilizados quando geralmente precisamos persistir dados semiestruturados ou não estruturados. Enquanto os RDBMS funcionam baseados nas propriedades ACID (Atomicity, Consistency, Isolation, Durability), os NoSQL's funcionam seguindo a propriedade BASE (Basically Availabe Soft state Eventually Consistent), desta maneira, é possível entregar seus principais valores: Escalabilidade, Replicação de dados, Schema free, Performance e processamento distribuído.
+Bancos de dados NoSQL - Not Only SQL - são utilizados quando geralmente precisamos persistir dados semiestruturados ou não estruturados. Enquanto os RDBMS funcionam baseados nas propriedades ACID (Atomicity, Consistency, Isolation, Durability), os NoSQL's funcionam seguindo a propriedade BASE (Basically Availabe Soft state Eventually Consistent), desta maneira, é possível entregar seus principais valores: Escalabilidade, Replicação de dados, Schema free, Performance e processamento distribuído.
 
 
 ### Sobre o DynamoDB:
@@ -64,7 +64,7 @@ Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de mod
 	- Consultar investimentos por status da operação
 	- Consultar investimentos por dia de transação
 
-Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
+Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso.
 
 ![ERD_dynamo](https://github.com/levisouuza/DynamoTrader/blob/master/images/ERD_dynamoDB.png)
 
