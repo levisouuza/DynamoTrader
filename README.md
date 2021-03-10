@@ -1,7 +1,7 @@
 # DynamoTrader
 
 
-Com a finalidade de aprender mais sobre AWS, criei o projeto DynamoTrader, que consiste em utilizar DynamoDB, um serviço de banco de dados NoSQL totalmente gerenciado pela AWS, para simular uma repositório de investimentos que tem a função de persistir dados de cadastro e operações dos traders.
+Com a finalidade de aprender mais sobre AWS, criei o projeto DynamoTrader, onde utilizo o [DynamoDB](https://aws.amazon.com/pt/dynamodb/), um serviço de banco de dados NoSQL totalmente gerenciado pela AWS, para simular uma repositório de investimentos que tem a função de persistir dados de cadastro e operações dos traders.
 
 Como são transações em High Frenquency, escolhi o DynamoDB devido sua flexibilidade de Schema (Key-Value e Documentos), baixissíma latência(10MS) e replicação em 3 AZ's garantindo suporte a Disaster Recovery. 
 
@@ -75,6 +75,21 @@ Após entendermos como os dados serão armazenados, podemos [criar](https://gith
 Para facilitar a consulta de alguns dados, podemos criar índices. No projeto foram criados índices do tipo GSI. A imagem abaixo podemos observá-los na console da AWS e com esse [script](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateIndex.py) é possível visualizar como podemos criá-los.
 
 ![GSI](https://github.com/levisouuza/DynamoTrader/blob/master/images/GSI_dynamo_AWS.png)
+
+Por fim, nesse [script](https://github.com/levisouuza/DynamoTrader/blob/master/main.py) observamos o códigos em ação, realizamos alguns dos padrões de acesso citados acima. O resultado final está abaixo, direto da console da AWS.
+
+![dadosDynamoDB](https://github.com/levisouuza/DynamoTrader/blob/master/images/Dados_consoleAWS.png)
+
+
+#### Fontes:
+* https://aws.amazon.com/pt/dynamodba
+* https://aws.amazon.com/pt/getting-started/hands-on/data-modeling-gaming-app-with-dynamodb/3/
+* https://aws.amazon.com/pt/getting-started/hands-on/create-manage-nonrelational-database-dynamodb/4/
+* https://medium.com/@vinicius_roc/dynamodb-o-que-voc%C3%AA-precisa-saber-antes-de-usar-1bcad8d31787
+* https://www.youtube.com/watch?v=S3JSYCejAto
+* https://www.youtube.com/watch?v=kSnpuKr3Ajw&t=1298s
+
+
 
 
 
