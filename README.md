@@ -47,11 +47,34 @@ Alguns conceitos são primordiais quando trabalhamos com o DynamoDB:
 
 ## PROJETO
 
-Assim como os bancos de dados relacionais, o Kick-off para implementação de um banco de dados NoSQL consiste em modelar a estrutura de dados que será persistida. Logo, segue a imagem da modelagem para a nossa tabela.
+Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de modelagem dos dados, no DynamoDB pensamos inicialmente em como iremos acessar os dados antes de modelar a tabela. Chamamos isso de **Padrões de Acesso**. Logo abaixo estão os padrões de acesso que utilizaremos para o projeto.
+
+1. TRADER
+	- Registrar trader
+	- Atualizar trader
+	- deletar trader
+	- consultar trader
+
+2.INVESTMENTS
+	- Realizar investimentos
+	- Cancelar investimentos
+	- Consultar investimentos por Trader
+	- Consultar ticker de empresas investidos
+	- Consultar investimentos por tipo de operação (Buy and Sell)
+	- Consultar investimentos por status da operação
+	- Consultar investimentos por dia de transação
+
+
+Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
 
 ![ERD_dynamo](https://github.com/levisouuza/DynamoTrader/blob/master/images/ERD_dynamoDB.png)
 
-Como podemos observar, existem dois processos principais, Traders e Investments. Para trabalharmos com DynamoDB precisamos "esquecer" a característica dos RDBMS de nomarlização de tabelas e joins. No DynamoDB, todos os casos de uso serão persisitidos em um único objeto.
+Existem dois processos principais, *Traders* e *Investments*. Para trabalharmos com DynamoDB precisamos "esquecer" a característica dos RDBMS de normalização de tabelas e joins. No DynamoDB, todos os casos de uso serão persisitidos em um único objeto.
+
+Após entendermos como os dados serão armazenados, podemos [criar](https://github.com/levisouuza/DynamoTrader/blob/master/Definition/CreateTable.py) a tabela e definirmos os **padrões de acesso** a ela.
+
+### Padrões de Acesso
+
 
 
 
