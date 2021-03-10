@@ -5,12 +5,12 @@ Com a finalidade de aprender mais sobre AWS, criei o projeto DynamoTrader, que c
 
 Como são transações em High Frenquency, escolhi o DynamoDB devido sua flexibilidade de Schema (Key-Value e Documentos), baixissíma latência(10MS) e replicação em 3 AZ's garantindo suporte a Disaster Recovery. 
 
-#### Overview - NoSQL Databases.
+### Overview - NoSQL Databases.
 
 BancoS de dados NoSQL - Not Only SQL - são utilizados quando geralmente precisamos persistir dados semiestruturados ou não estruturados. Enquanto os RDBMS funcionam baseados nas propriedades ACID (Atomicity, Consistency, Isolation, Durability), os NoSQL's funcionam seguindo a propriedade BASE (Basically Availabe Soft state Eventually Consistent), desta maneira, é possível entregar seus principais valores: Escalabilidade, Replicação de dados, Schema free, Performance e processamento distribuído.
 
 
-#### Sobre o DynamoDB:
+### Sobre o DynamoDB:
 
 Alguns conceitos são primordiais quando trabalhamos com o DynamoDB:
 
@@ -43,7 +43,7 @@ Alguns conceitos são primordiais quando trabalhamos com o DynamoDB:
 	- Write Capacity Units: Representa uma escrita por segundo de um item de 1Kb. Quanto maior o item que você escrever, maior será a WCU solicitada (e cobrada por isso).
 
 
-### PROJETO
+## PROJETO
 
 Assim como os bancos de dados relacionais, o Kick-off para implementação de um banco de dados NoSQL consiste em modelar a estrutura de dados que será persistida. Logo, segue a imagem da modelagem para a nossa tabela.
 
