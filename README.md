@@ -55,7 +55,7 @@ Diferente de bancos de dados relacionais, onde o Kick-off é dado na fase de mod
 	- deletar trader
 	- consultar trader
 
-2.INVESTMENTS
+2. INVESTMENTS
 	- Realizar investimentos
 
 Agora que identificamos os padrões de acesso, podemos modelar nossos casos de uso, onde podemos observar logo abaixo.
