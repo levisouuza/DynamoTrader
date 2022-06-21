@@ -1,8 +1,4 @@
 
-"""
- Scripts with purpose to realize traders registers operations
-"""
-
 from dynamodb.DynamoDB import Dynamodb
 
 
@@ -10,22 +6,12 @@ class Trader:
 
     def __init__(self, table):
 
-        self.client = Dynamodb().client_dynamo(table)
+        self.dynamo_resource = Dynamodb().resource_dynamo().Table(table)
 
     def register_trader(self, cpf, name, lastname, email, birthdate, address, profile):
-        """
-        Function for register trader on platform
 
-        :param cpf: cpf trader user
-        :param name: name trader user
-        :param lastname: last name trader user
-        :param email: email trader user
-        :param birthdate: birth date user
-        :param address: address trader
-        :param profile: investor profile
-        """
         try:
-            self.client.put_item(
+            self.dynamo_resource.put_item(
                 Item={
                     "PK": f"TRADER#{cpf}",
                     "SK": f"#METADATA#{cpf}",
@@ -43,14 +29,7 @@ class Trader:
             exit()
 
     def update_trader(self, cpf, field, value):
-        """
-        Function of the traders registers update on platform
-
-        :param cpf: cpf trader user
-        :param field: field that will be updated
-        :param value: new value
-        """
-        self.client.update_item(
+        self.dynamo_resource.update_item(
             Key={
                 "PK": f"TRADER#{cpf}",
                 "SK": f"#METADATA#{cpf}"
@@ -63,7 +42,7 @@ class Trader:
         print('Register successfully updated!')
 
     def delete_trader(self, cpf):
-        self.client.delete_item(
+        self.dynamo_resource.delete_item(
             Key={
                 "PK": f"TRADER#{cpf}",
                 "SK": f"#METADATA#{cpf}"

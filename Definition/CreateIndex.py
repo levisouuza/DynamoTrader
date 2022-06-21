@@ -1,31 +1,16 @@
 
-"""
-    Scripts to create Global Secondary Index Dynamodb table.
-"""
-
 from dynamodb.DynamoDB import Dynamodb
-
 
 class CreateIndex:
 
-    def __init__(self, table):
+    def __init__(self):
 
-        self.table = table
-        self.dynamo = Dynamodb().client_dynamo(table, 'S', 'S')
+        self.dynamo_client = Dynamodb().client_dynamo()
 
-    def global_index(self, attribute, index_name, read, write):
-        """
-        Function to create global secondary index dynamodb.
-
-        :param attribute: attribute name
-        :param index_name: index name
-        :param read: quantity capacity units read.
-        :param write: quantity capacity units write.
-        :return:
-        """
+    def global_index(self, table, attribute, index_name, read, write):
         try:
-            index = self.dynamo.update_table(
-                TableName=f"{self.table}",
+            index = self.dynamo_client.update_table(
+                TableName=f"{table}",
                 AttributeDefinitions=[
                     {
                         "AttributeName": f'{attribute}',
