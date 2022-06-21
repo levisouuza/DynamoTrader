@@ -1,33 +1,18 @@
 
-"""
- Script with purpose to realize registers and cancels investments transaction
-"""
-
 from dynamodb.DynamoDB import Dynamodb
+from datetime import datetime, timedelta
 
 
 class Investments:
 
     def __init__(self, table):
 
-        self.client = Dynamodb().client_dynamo(table)
+        self.dynamo_resource = Dynamodb().resource_dynamo().Table(table)
 
     def register_invest(self, cpf, transaction, ticker, date, quantity, price, operation, broker, status):
-        """
-        Function of register investment
-
-        :param cpf: cpf trader user
-        :param transaction: sequential transaction number
-        :param ticker: acronym of the transaction asset
-        :param date: date transaction(current date)
-        :param quantity: investment vol asset
-        :param price: current price transaction
-        :param operation: type operation. B: Buy - S: Sell
-        :param broker: Investment Platform
-        :param status: Transaction status. A: In holding, C: Cancelled, E: Executed.
-        """
         try:
-            self.client.put_item(
+            ConsultActionDatetime = datetime.now()
+            self.dynamo_resource.put_item(
                 Item={
                     "PK": f"TRANSACTION#{transaction}",
                     "SK": f"TRADER#{cpf}",
@@ -38,7 +23,7 @@ class Investments:
                     "OperationType": operation.upper(),
                     "Broker": broker.upper(),
                     "Situation": status.upper(),
-
+                    "DatExclusion": int((ConsultActionDatetime + timedelta(days=1)).timestamp())
                 }
             )
 
@@ -47,13 +32,7 @@ class Investments:
             exit()
 
     def cancel_invest(self, cpf, transaction):
-        """
-        Function to cancel investments in holding
-
-        :param cpf: cpf trader user
-        :param transaction: sequential transaction number
-        """
-        output = self.client.get_item(
+        output = self.dynamo_resource.get_item(
             Key={
                 "PK": f"TRANSACTION#{transaction}",
                 "SK": f"TRADER#{cpf}",
@@ -64,7 +43,7 @@ class Investments:
         elif output['Item']['Situation'] == 'C':
             print('Unable to cancel. Operation Canceled!')
         else:
-            self.client.update_item(
+            self.dynamo_resource.update_item(
                 Key={
                     "PK": f"TRANSACTION#{transaction}",
                     "SK": f"TRADER#{cpf}",

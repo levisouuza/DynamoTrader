@@ -7,24 +7,17 @@ from dynamodb.DynamoDB import Dynamodb
 
 
 class Create:
+    def __init__(self):
 
-    def __init__(self, table):
+        self.dynamo_client = Dynamodb().client_dynamo()
+        self.dynamo_resource = Dynamodb().resource_dynamo()
 
-        self.table = table
-        self.dynamo = Dynamodb().client_dynamo(table, 'S')
+    def create_table_db(self, table, pk_name, sk_name, read, write, ttl=None):
 
-    def create(self, pk_name, sk_name, read, write):
-        """
-        Function to create table on DynamoDB
-
-        :param pk_name: primary key name or Partition key
-        :param sk_name: secondary key name or classification key
-        :param read: quantity capacity units read.
-        :param write: quantity capacity units write.
-        """
         try:
-            self.dynamo.create_table(
-                TableName=f'{self.table}',
+            """
+            self.dynamo_client.create_table(
+                TableName=f'{table}',
                 AttributeDefinitions=[
                     {
                         "AttributeName": f"{pk_name}",
@@ -50,15 +43,30 @@ class Create:
                         "ReadCapacityUnits": read,
                         "WriteCapacityUnits": write
                     }
-
             )
+"""
+            def update_ttl():
+                self.dynamo_client.update_time_to_live(
+                    TableName=f"{table}",
+                    TimeToLiveSpecification={
+                        "Enabled": True,
+                        "AttributeName": f"{ttl}"
+                    }
+                )
 
-            print(f"Table {self.table} created successfully.")
+
+            if ttl:
+                pass
+                print(ttl)
+            else:
+                try:
+                    update_ttl()
+                    print('TTL Criado')
+                except Exception as e:
+                    raise Exception("Erro ao criar TTL")
+
+            print(f"Table {table} created successfully.")
+            return True
 
         except Exception as e:
             print(f"Could not create table. Error:{e}")
-
-
-
-
-
