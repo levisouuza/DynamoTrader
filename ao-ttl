@@ -1,0 +1,131 @@
+[33mcommit 78568aa12ad10cf7525d9cdaadbc33278d56a8ed[m[33m ([m[1;36mHEAD -> [m[1;32mprojeto-inclusao-ttl[m[33m)[m
+Author: levis <levisouuza@gmail.com>
+Date:   Tue Jun 21 12:04:48 2022 -0300
+
+    feat: implementar create table com ttl
+
+[33mcommit b01ad92979ae161692b37eb4cafabaa1b73204e0[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 08:04:22 2021 -0300
+
+    Update README.md
+
+[33mcommit dff1a39e868fe43cc911e73631a621514e2fd6a8[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 08:02:29 2021 -0300
+
+    Update README.md
+
+[33mcommit 6d02ea4b59d18099640f70e3706bbed6434f0b37[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 08:00:03 2021 -0300
+
+    Update README.md
+
+[33mcommit c2a276f42a6d2e14ea02c3e69714e3237fdb5487[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:59:17 2021 -0300
+
+    Update README.md
+
+[33mcommit b04bf7b9fc3813c0a85f3d55eeaf28fa56de8a8f[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:49:12 2021 -0300
+
+    Update README.md
+
+[33mcommit 77fcd6e90ad952561d2a6e7b758725f4b5b4a8d4[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:33:14 2021 -0300
+
+    Update README.md
+
+[33mcommit cc6ab2f8bd6f74e0d98906d6867f9bfc79cb3975[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:32:54 2021 -0300
+
+    Update README.md
+
+[33mcommit a75ae883e6a037d562383eee6c88465d9e5cf958[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:32:34 2021 -0300
+
+    Update README.md
+
+[33mcommit 37292e158a9859f936f4034e7cc39ca788428bbb[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:32:11 2021 -0300
+
+    Update README.md
+
+[33mcommit fa7adba436461891779a7245d0f2bda02fcffa32[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:31:28 2021 -0300
+
+    Update README.md
+
+[33mcommit f68b271df805270c7b25556c8c6039a708dc3f5d[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:30:22 2021 -0300
+
+    Update README.md
+
+[33mcommit bdc64bb2ced6aa546a68639751acebbb0d5001a5[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:20:38 2021 -0300
+
+    Update README.md
+
+[33mcommit 4dc6a6891b87d32a640575f6acad6d9a6596d2b1[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:20:02 2021 -0300
+
+    Update README.md
+
+[33mcommit d1dd98ea4c894a45325e01e3293447fbf553ba56[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:17:03 2021 -0300
+
+    Update README.md
+
+[33mcommit df22829e1f3843380a94fd9d806b83f940dc8744[m
+Author: levis <levisouuza@gmail.com>
+Date:   Wed Mar 10 07:15:43 2021 -0300
+
+    delete image-dynamo_client.png
+
+[33mcommit 62caef2c480294fd759ae6aff49f307d702d9751[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Wed Mar 10 07:14:50 2021 -0300
+
+    Update README.md
+
+[33mcommit 06851f5d8b572e944402885bdf3a1123aa4da3a7[m
+Author: levis <levisouuza@gmail.com>
+Date:   Wed Mar 10 06:05:49 2021 -0300
+
+    upload main.py
+
+[33mcommit ac3752ba5e0cbccfe1aee8a415dd27fd661147bf[m
+Author: levis <levisouuza@gmail.com>
+Date:   Tue Mar 9 08:54:29 2021 -0300
+
+    upload images
+
+[33mcommit 51d9a41b6df551989cc8d7ce1128cd021581df97[m
+Author: levis <levisouuza@gmail.com>
+Date:   Tue Mar 9 08:32:19 2021 -0300
+
+    first commit
+
+[33mcommit 64bc0d4e2db8c24ec67573d20b67c41206f073dc[m
+Author: levis <levisouuza@gmail.com>
+Date:   Tue Mar 9 08:29:36 2021 -0300
+
+    first commit
+
+[33mcommit 0bf8308594d23f1749a4bba145a65d60149375b2[m
+Author: Levi Souza <62394086+levisouuza@users.noreply.github.com>
+Date:   Tue Mar 9 08:24:52 2021 -0300
+
+    Initial commit

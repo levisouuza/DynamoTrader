@@ -10,7 +10,7 @@ from random import randint
 create_table = Create()
 create_table.create_table_db('trader-transaction', 'PK', 'SK', 1, 1, 'DatExclusion')
 
-
+#teste github
 # Register Trader
 """
 Trader('trader-transaction').register_trader('11122233344', 'Levi', 'Souza', 'levis@gmail.com', '1995-06-08',

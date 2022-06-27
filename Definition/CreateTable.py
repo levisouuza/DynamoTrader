@@ -54,8 +54,7 @@ class Create:
                     }
                 )
 
-
-            if ttl:
+            if ttl is None:
                 pass
                 print(ttl)
             else:
