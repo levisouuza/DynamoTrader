@@ -4,6 +4,7 @@
 """
 
 from dynamodb.DynamoDB import Dynamodb
+from time import sleep
 
 
 class Create:
@@ -15,7 +16,7 @@ class Create:
     def create_table_db(self, table, pk_name, sk_name, read, write, ttl=None):
 
         try:
-            """
+
             self.dynamo_client.create_table(
                 TableName=f'{table}',
                 AttributeDefinitions=[
@@ -44,7 +45,7 @@ class Create:
                         "WriteCapacityUnits": write
                     }
             )
-"""
+
             def update_ttl():
                 self.dynamo_client.update_time_to_live(
                     TableName=f"{table}",
@@ -54,6 +55,8 @@ class Create:
                     }
                 )
 
+            print('Waiting...creating TTL Config')
+            sleep(10)
             if ttl is None:
                 pass
                 print(ttl)

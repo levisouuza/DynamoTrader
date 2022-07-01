@@ -14,17 +14,17 @@ class Investments:
             ConsultActionDatetime = datetime.now()
             self.dynamo_resource.put_item(
                 Item={
-                    "PK": f"TRANSACTION#{transaction}",
-                    "SK": f"TRADER#{cpf}",
-                    "Ticker": ticker.upper(),
+                    "PK": transaction,
                     "TransactionDate": date.strftime('%Y-%m-%d %H:%M:%S'),
+                    "Cpf": cpf,
+                    "Ticker": ticker.upper(),
                     "Quantity": quantity,
                     "Price": price,
                     "OperationType": operation.upper(),
                     "Broker": broker.upper(),
                     "Situation": status.upper(),
                     "DatExclusion": int((ConsultActionDatetime + timedelta(days=1)).timestamp())
-                }
+                },
             )
 
         except Exception as e:
