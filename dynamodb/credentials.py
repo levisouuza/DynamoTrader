@@ -2,7 +2,7 @@
 import platform
 
 if platform.system() == 'Windows':
-    directory = r'dynamodb/new_user_credentials.csv'
+    directory = r'C:\Users\Levi\PycharmProjects\DynamoTrader\dynamodb\new_user_credentials.csv'
 else:
     directory = '/home/ubuntu/TraderTransaction/dynamodb/new_user_credentials.csv'
 
